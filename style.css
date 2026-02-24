@@ -1,0 +1,154 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BODY */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, #000000 0%, #131212 300px);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* IMAGEN SUPERIOR */
+header img {
+  width: 300px;
+  object-fit: cover;
+}
+
+/* DESCRIPCIÓN */
+.descripcion {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.descripcion h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.descripcion p {
+  color: #b3b3b3;
+  line-height: 1.6;
+}
+
+/* REDES */
+.redes {
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+/* Instagram */
+.instagram {
+  border: 2px solid #1db954;
+  color: #1db954;
+}
+
+.instagram:hover {
+  background-color: #1db954;
+  color: black;
+}
+
+/* YouTube */
+.youtube {
+  border: 2px solid red;
+  color: red;
+}
+
+.youtube:hover {
+  background-color: red;
+  color: white;
+}
+
+/* LISTA CANCIONES */
+ul {
+  list-style: none;
+  padding: 20px;
+}
+
+li {
+  margin: 12px 0;
+}
+
+ul a {
+  display: block;
+  max-width: 400px;
+  margin: auto;
+  padding: 12px;
+  border-radius: 25px;
+  background-color: #181818;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+ul a:hover {
+  background-color: #1db954;
+  transform: scale(1.03);
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE */
+/* ========================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+  header img {
+    height: 350px;
+  }
+
+  .descripcion h2 {
+    font-size: 24px;
+  }
+
+  .btn {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  ul a {
+    width: 90%;
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  header img {
+    width: 350px;
+  }
+
+  .descripcion h2 {
+    font-size: 20px;
+  }
+
+  .descripcion p {
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  ul a {
+    font-size: 14px;
+  }
+}
