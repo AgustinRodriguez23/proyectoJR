@@ -1,139 +1,125 @@
-/* RESET */
+/* Reset básico */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* BODY */
+/* Fondo tipo Spotify */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to bottom, #000000 0%, #131212 300px);
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #1f1f1f, #000);
   color: white;
-  text-align: center;
   min-height: 100vh;
 }
 
-/* IMAGEN SUPERIOR */
-header img {
-  width: 300px;
+/* HEADER */
+header {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+/* Imagen artista */
+.art {
+  width: 180px;
+  height: 180px;
   object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  margin-bottom: 15px;
 }
 
-/* DESCRIPCIÓN */
-.descripcion {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 20px;
-}
-
+/* Descripción */
 .descripcion h2 {
   font-size: 28px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .descripcion p {
-  color: #b3b3b3;
-  line-height: 1.6;
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 20px;
 }
 
-/* REDES */
+/* Redes sociales */
 .redes {
-  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin: 8px;
-  padding: 10px 20px;
-  border-radius: 30px;
+  padding: 10px 18px;
+  border-radius: 25px;
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-  font-size: 16px;
-}
-
-/* Instagram */
-.instagram {
-  border: 2px solid #1db954;
-  color: #1db954;
-}
-
-.instagram:hover {
-  background-color: #1db954;
-  color: black;
-}
-
-/* YouTube */
-.youtube {
-  border: 2px solid red;
-  color: red;
-}
-
-.youtube:hover {
-  background-color: red;
   color: white;
+  font-size: 14px;
+  transition: 0.3s;
 }
 
-/* LISTA CANCIONES */
+.instagram {
+  background: #1c80c4;
+}
+
+.youtube {
+  background: #ff0000;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* MAIN */
+main {
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+main h1 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+/* Lista canciones */
 ul {
   list-style: none;
-  padding: 20px;
 }
 
-li {
-  margin: 12px 0;
+ul li {
+  margin-bottom: 10px;
 }
 
-ul a {
+ul li a {
   display: block;
-  max-width: 400px;
-  margin: auto;
-  padding: 12px;
-  border-radius: 25px;
+  padding: 15px;
   background-color: #181818;
+  border-radius: 8px;
   text-decoration: none;
   color: white;
   transition: 0.3s;
 }
 
-ul a:hover {
-  background-color: #1db954;
-  transform: scale(1.03);
+ul li a:hover {
+  background-color: #17af1fd7;
+  transform: translateX(5px);
 }
 
-/* ========================= */
-/* 📱 RESPONSIVE */
-/* ========================= */
+/* --------------------- */
+/* RESPONSIVE MOBILE */
+/* --------------------- */
 
-/* Tablets */
-@media (max-width: 768px) {
-
-  .descripcion h2 {
-    font-size: 24px;
-  }
-
-  .btn {
-    width: 80%;
-    max-width: 300px;
-  }
-
-  ul a {
-    width: 90%;
-  }
-}
-
-/* Celulares */
 @media (max-width: 480px) {
-  header img {
-    width: 200px;
+
+  .art {
+    width: 140px;
+    height: 140px;
   }
 
   .descripcion h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .descripcion p {
@@ -141,12 +127,80 @@ ul a:hover {
   }
 
   .btn {
-    width: 90%;
-    font-size: 14px;
+    font-size: 13px;
+    padding: 8px 14px;
   }
 
-  ul a {
-    font-size: 14px;
+  main h1 {
+    font-size: 18px;
   }
 
+  ul li a {
+    padding: 12px;
+    font-size: 14px;
+  }
 }
+
+
+/* ========================== */
+/* PAGINA CANCION */
+/* ========================== */
+
+.pagina-cancion {
+  background: linear-gradient(to bottom, #1f1f1f, #000);
+  color: white;
+  min-height: 100vh;
+  padding: 30px 20px;
+}
+
+.contenedor-cancion {
+  max-width: 700px;
+  margin: auto;
+}
+
+.volver {
+  display: inline-block;
+  margin-bottom: 25px;
+  text-decoration: none;
+  color: #1db954;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.volver:hover {
+  opacity: 0.7;
+}
+
+.contenedor-cancion h1 {
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.letra {
+  background-color: #181818;
+  padding: 25px;
+  border-radius: 10px;
+  line-height: 1.8;
+  font-size: 16px;
+  white-space: pre-line;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+/* -------- Responsive -------- */
+
+@media (max-width: 480px) {
+
+  .contenedor-cancion h1 {
+    font-size: 22px;
+  }
+
+  .letra {
+    font-size: 14px;
+    padding: 18px;
+  }
+
+  .volver {
+    font-size: 14px;
+  }
+}
+
