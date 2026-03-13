@@ -78,8 +78,6 @@ Desarrollado por **Agustín Rodríguez**.
 
 ## 🔗 Demo
 
-(Si lo subís a GitHub Pages podés poner el link acá)
-
 ```
 https://proyecto-jr.vercel.app/index.html
 ```
